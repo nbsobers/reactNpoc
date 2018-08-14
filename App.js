@@ -1,18 +1,23 @@
 
 import React, { Component } from 'react';
-// import {
-//   Platform,
-//   StyleSheet,
-//   Text,
-//   View
-// } from 'react-native';
 
-import Login from './src/components/login';
+import SplashScreen from 'react-native-splash-screen';
+import Main from './src/components/Main';
+import Login from './src/components/login/login';
+// import FlexColumns from './src/components/flexColumns';
+// import FlexRow from './src/components/flexRow';
 
 export default class App extends Component {
+  componentDidMount() {
+    SplashScreen.hide();
+  }
+
   render() {
     return (     
-        <Login />      
+        <Main />
+        //<Login />
+        //<FlexColumns />
+        //<FlexRow />
     );
   }
 }
